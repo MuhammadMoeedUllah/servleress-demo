@@ -1,0 +1,29 @@
+{
+  "name": "leavie",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "description": "This is leave marking service. Sends an email to associated client of an employee and CC 'People Management' department.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-http": "SLS_DEBUG=* serverless offline",
+    "dev-invoke": "serverless invoke local --function notify",
+    "deploy": "serverless deploy",
+    "undeploy": "serverless remove"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^9.0.0"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.1.0",
+    "aws-sdk": "^2.1183.0",
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
+    "serverless": "^3.21.0"
+  }
+}
